@@ -3,7 +3,7 @@ module github.com/Laisky/mockery/v2
 go 1.19
 
 require (
-	github.com/Laisky/testify v1.8.2-0.20230130075208-0ee06f45b989
+	github.com/Laisky/testify v1.8.2-0.20230130080559-eadd45f8fafa
 	github.com/chigopher/pathlib v0.12.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pkg/errors v0.9.1

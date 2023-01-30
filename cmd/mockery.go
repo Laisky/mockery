@@ -10,6 +10,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Laisky/mockery/v2/pkg"
+	"github.com/Laisky/mockery/v2/pkg/config"
+	"github.com/Laisky/mockery/v2/pkg/logging"
 	"github.com/chigopher/pathlib"
 	"github.com/mitchellh/go-homedir"
 	"github.com/pkg/errors"
@@ -17,9 +20,6 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/vektra/mockery/v2/pkg"
-	"github.com/vektra/mockery/v2/pkg/config"
-	"github.com/vektra/mockery/v2/pkg/logging"
 	"golang.org/x/crypto/ssh/terminal"
 	"golang.org/x/tools/go/packages"
 )

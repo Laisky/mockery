@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/Laisky/testify/assert"
 )
 
 var ctx = context.Background()

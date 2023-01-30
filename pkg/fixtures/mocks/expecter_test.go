@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/stretchr/testify/mock"
-	"github.com/stretchr/testify/require"
-	mocks "github.com/vektra/mockery/v2/mocks/pkg/fixtures"
+	mocks "github.com/Laisky/mockery/v2/mocks/pkg/fixtures"
+	"github.com/Laisky/testify/mock"
+	"github.com/Laisky/testify/require"
 )
 
 var (

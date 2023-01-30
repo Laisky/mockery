@@ -3,7 +3,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/Laisky/testify/assert"
 )
 
 func TestNewShowConfigCmd(t *testing.T) {

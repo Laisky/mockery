@@ -6,11 +6,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Laisky/mockery/v2/pkg/config"
+	"github.com/Laisky/testify/assert"
+	"github.com/Laisky/testify/require"
 	"github.com/chigopher/pathlib"
 	"github.com/spf13/viper"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"github.com/vektra/mockery/v2/pkg/config"
 )
 
 func TestNewRootCmd(t *testing.T) {

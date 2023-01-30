@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/Laisky/mockery/v2/pkg/config"
+	"github.com/Laisky/mockery/v2/pkg/logging"
 	"github.com/rs/zerolog"
-	"github.com/vektra/mockery/v2/pkg/config"
-	"github.com/vektra/mockery/v2/pkg/logging"
 )
 
 type Cleanup func() error

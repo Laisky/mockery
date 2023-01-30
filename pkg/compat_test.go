@@ -3,12 +3,12 @@ package pkg
 import (
 	"testing"
 
-	"github.com/stretchr/testify/mock"
-	"github.com/stretchr/testify/suite"
-	mocks "github.com/vektra/mockery/v2/mocks/pkg/fixtures"
+	mocks "github.com/Laisky/mockery/v2/mocks/pkg/fixtures"
+	"github.com/Laisky/testify/mock"
+	"github.com/Laisky/testify/suite"
 )
 
-// CompatSuite covers compatibility with github.com/stretchr/testify/mock.
+// CompatSuite covers compatibility with github.com/Laisky/testify/mock.
 type CompatSuite struct {
 	suite.Suite
 }

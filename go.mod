@@ -1,15 +1,15 @@
-module github.com/vektra/mockery/v2
+module github.com/Laisky/mockery/v2
 
 go 1.19
 
 require (
+	github.com/Laisky/testify v1.8.2-0.20230130075208-0ee06f45b989
 	github.com/chigopher/pathlib v0.12.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/rs/zerolog v1.27.0
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/viper v1.12.0
-	github.com/stretchr/testify v1.7.2
 	golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
 	golang.org/x/tools v0.1.11
 	gopkg.in/yaml.v2 v2.4.0
@@ -31,7 +31,7 @@ require (
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/stretchr/objx v0.1.1 // indirect
+	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/subosito/gotenv v1.4.0 // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
 	golang.org/x/sys v0.0.0-20220610221304-9f5ed59c137d // indirect

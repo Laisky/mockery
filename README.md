@@ -1,9 +1,9 @@
 
 mockery
 =======
-[![Release](https://github.com/vektra/mockery/actions/workflows/release.yml/badge.svg)](https://github.com/vektra/mockery/actions/workflows/release.yml) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/vektra/mockery/v2?tab=overview) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/vektra/mockery) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/vektra/mockery) [![Go Report Card](https://goreportcard.com/badge/github.com/vektra/mockery)](https://goreportcard.com/report/github.com/vektra/mockery) [![codecov](https://codecov.io/gh/vektra/mockery/branch/master/graph/badge.svg)](https://codecov.io/gh/vektra/mockery)
+[![Release](https://github.com/vektra/mockery/actions/workflows/release.yml/badge.svg)](https://github.com/vektra/mockery/actions/workflows/release.yml) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/Laisky/mockery/v2?tab=overview) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/vektra/mockery) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/vektra/mockery) [![Go Report Card](https://goreportcard.com/badge/github.com/vektra/mockery)](https://goreportcard.com/report/github.com/vektra/mockery) [![codecov](https://codecov.io/gh/vektra/mockery/branch/master/graph/badge.svg)](https://codecov.io/gh/vektra/mockery)
 
-mockery provides the ability to easily generate mocks for Golang interfaces using the [stretchr/testify/mock](https://pkg.go.dev/github.com/stretchr/testify/mock?tab=doc) package. It removes
+mockery provides the ability to easily generate mocks for Golang interfaces using the [stretchr/testify/mock](https://pkg.go.dev/github.com/Laisky/testify/mock?tab=doc) package. It removes
 the boilerplate coding required to use mocks.
 
 Table of Contents
@@ -67,7 +67,7 @@ Supported, but not recommended: [see wiki page](https://github.com/vektra/mocker
 
 Alternatively, you can use the go install method to compile the project using your local environment:
 
-    go install github.com/vektra/mockery/v2@latest
+    go install github.com/Laisky/mockery/v2@latest
 
 Configuration
 --------------
@@ -127,7 +127,7 @@ Run: `mockery --name=Stringer` and the following will be output to `mocks/String
 package mocks
 
 import (
-	"github.com/stretchr/testify/mock"
+	"github.com/Laisky/testify/mock"
 
 	testing "testing"
 )
@@ -177,7 +177,7 @@ Run: `mockery --name=SendFunc` and the following will be output to `mocks/SendFu
 package mocks
 
 import (
-	"github.com/stretchr/testify/mock"
+	"github.com/Laisky/testify/mock"
 
 	testing "testing"
 )
@@ -231,7 +231,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/jaytaylor/mockery-example/mocks"
-	"github.com/stretchr/testify/mock"
+	"github.com/Laisky/testify/mock"
 )
 
 func main() {
@@ -291,7 +291,7 @@ type Proxy interface {
 The argument can be passed through as the return value:
 
 ```go
-import . "github.com/stretchr/testify/mock"
+import . "github.com/Laisky/testify/mock"
 
 proxyMock := mocks.NewProxy(t)
 proxyMock.On("passthrough", mock.AnythingOfType("context.Context"), mock.AnythingOfType("string")).
@@ -332,7 +332,7 @@ proxyMock.On("passthrough", mock.AnythingOfType("context.Context"), mock.Anythin
 	})
 ```
 
-If any return argument is missing, `github.com/stretchr/testify/mock.Arguments.Get` will emit a panic.
+If any return argument is missing, `github.com/Laisky/testify/mock.Arguments.Get` will emit a panic.
 
 For example, `panic: assert: arguments: Cannot call Get(0) because there are 0 argument(s). [recovered]` indicates that `Return` was not provided any arguments but (at least one) was expected based on the interface. `Get(1)` would indicate that the `Return` call is missing a second argument, and so on.
 

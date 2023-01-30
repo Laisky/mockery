@@ -16,9 +16,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
+	"github.com/Laisky/mockery/v2/pkg/config"
+	"github.com/Laisky/mockery/v2/pkg/logging"
 	"github.com/rs/zerolog"
-	"github.com/vektra/mockery/v2/pkg/config"
-	"github.com/vektra/mockery/v2/pkg/logging"
 	"golang.org/x/tools/imports"
 )
 
@@ -51,7 +51,7 @@ func NewGenerator(ctx context.Context, c config.Config, iface *Interface, pkg st
 		nameToPackagePath: make(map[string]string),
 	}
 
-	g.addPackageImportWithName(ctx, "github.com/stretchr/testify/mock", "mock")
+	g.addPackageImportWithName(ctx, "github.com/Laisky/testify/mock", "mock")
 
 	return g
 }
@@ -193,11 +193,12 @@ func (g *Generator) mockName() string {
 }
 
 // getTypeConstraintString returns type constraint string for a given interface.
-//  For instance, a method using this constraint:
 //
-//    func Foo[T Stringer](s []T) (ret []string) {
+//	For instance, a method using this constraint:
 //
-//    }
+//	  func Foo[T Stringer](s []T) (ret []string) {
+//
+//	  }
 //
 // The constraint returned will be "[T Stringer]"
 //
@@ -833,7 +834,7 @@ func (g *Generator) generateCalled(list *paramList, formattedParamNames string) 
 	// the variadic argument. But the alternative is less accessible because it requires
 	// building a []interface{} before calling Mock methods like On and AssertCalled for
 	// the variadic argument, and creates incompatibility issues with the diff algorithm
-	// in github.com/stretchr/testify/mock.
+	// in github.com/Laisky/testify/mock.
 	//
 	// This mirroring will allow argument lists for methods like On and AssertCalled to
 	// always resemble the expected calls they describe and retain compatibility.

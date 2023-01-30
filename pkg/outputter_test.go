@@ -3,7 +3,7 @@ package pkg
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/Laisky/testify/assert"
 )
 
 func TestFilenameBare(t *testing.T) {

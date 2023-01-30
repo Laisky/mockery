@@ -20,7 +20,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"golang.org/x/crypto/ssh/terminal"
+	"golang.org/x/term"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -318,7 +318,8 @@ func getLogger(levelStr string) (zerolog.Logger, error) {
 		Out:        out,
 		TimeFormat: time.RFC822,
 	}
-	if !terminal.IsTerminal(int(out.Fd())) || os.Getenv("TERM") == "dumb" {
+
+	if !term.IsTerminal(int(out.Fd())) || os.Getenv("TERM") == "dumb" {
 		writer.NoColor = true
 	}
 	log := zerolog.New(writer).

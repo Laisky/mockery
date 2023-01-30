@@ -3,8 +3,8 @@
 package mocks
 
 import (
-	mock "github.com/Laisky/testify/mock"
 	fixtures "github.com/Laisky/mockery/v2/pkg/fixtures"
+	mock "github.com/Laisky/testify/mock"
 
 	test "github.com/Laisky/mockery/v2/pkg/fixtures/test"
 )

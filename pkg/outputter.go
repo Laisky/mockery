@@ -70,7 +70,7 @@ func (p *FileOutputStreamProvider) GetWriter(ctx context.Context, iface *Interfa
 	}
 
 	log = log.With().Str(logging.LogKeyPath, path).Logger()
-	ctx = log.WithContext(ctx)
+	// ctx = log.WithContext(ctx)
 
 	log.Debug().Msgf("creating writer to file")
 	f, err := os.Create(path)

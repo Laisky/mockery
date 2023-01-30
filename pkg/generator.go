@@ -811,7 +811,7 @@ func (g *Generator) generateCalled(list *paramList, formattedParamNames string) 
 
 	// list.Types[] will contain a leading '...'. Strip this from the string to
 	// do easier comparison.
-	strippedIfaceType := strings.Trim(list.Types[namesLen-1], "...")
+	strippedIfaceType := strings.TrimPrefix(list.Types[namesLen-1], "...")
 	variadicIface := strippedIfaceType == "interface{}"
 
 	if variadicIface {
